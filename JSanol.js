@@ -11,7 +11,7 @@ function fetcher(){
         content.style.visibility = 'hidden';
     } else{
     const getAPI = async () => {
-        const response = await fetch(`http://www.omdbapi.com/?t=${title}&y=${year}&plot=full&apikey=f9cf2495`);
+        const response = await fetch(`https://www.omdbapi.com/?t=${title}&y=${year}&plot=full&apikey=f9cf2495`);
         console.log(response.status)
         const data = await response.json();
         return data;
