@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Golos+Text&family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel = 'stylesheet' href = 'styles.css'>
+    <title>Ayyemdibee</title>
+</head>
+<body>
+
+    <div class = 'searchBar'>
+        <h1>Welcome to Insti's Movie DataBase!</h1>
+        <hr>
+    </div>
+        <form onsubmit="return fetcher()">
+            <div class="textBoxes">
+                <div>
+                    <label for="title">Enter the film's/series' title:</label>
+                    <input type="text" id="title" placeholder="Eg.: Star Wars">
+                </div>
+                <div>
+                    <label for="title">Enter year of release (optional):</label>
+                    <input type="text" id="year" placeholder="Eg.: 1977 (For more accuracy)">
+                </div>
+                <div class = 'Buttons'>
+                    <button type="submit" id = 'search'>Search!</button>
+                    <div class ='dropdown'>
+                        <button type="button" id = 'myWatchlist' onclick="myFunction()" class="dropbtn">My Watchlist ⮟</button>
+                        <div id="myDropdown" class="dropdown-content">
+                            <p>Search up a film or series which you like and add them to this watchlist!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    
+
+    <div id = 'error'></div>
+
+    <div id = 'content'>
+        <div id = 'movieTitle'></div>
+        <div id = 'watchlist'>
+            <form>
+                <button type="button" id = 'addToWatchlist'>+ Add to watchlist!</button>
+            </form>
+        </div>
+        <div id = 'poster'></div>
+        <div id = 'genInfo'></div>
+        <div id = 'plot'></div>
+        <div id = 'reception'></div> 
+
+    </div>
+
+    <script src="JSanol.js"></script>
+</body>
+</html>

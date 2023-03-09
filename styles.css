@@ -1,0 +1,169 @@
+body {
+  font-family: 'Golos Text', sans-serif;
+  background-image: url(https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX10952954.jpg);
+  text-align: center;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.searchBar{
+  background-color: black;
+  color: goldenrod;
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 1px;
+  border: 0px;
+  margin: 0px;
+
+}
+
+input{
+  width: 100%;
+  border-radius: 15px;
+  border: 2px solid goldenrod;
+}
+
+form{
+  display: unset;
+}
+
+.textBoxes{
+  background-color: black;
+  color: goldenrod;
+  position: sticky;
+  top: 0;
+  padding-top: 2px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+button{
+  background-color: black;
+  color: goldenrod;
+  font-family: 'Golos Text', sans-serif;
+  border-radius: 25px;
+  font-size: 20px;
+  padding: 1px 20px;
+  transition-duration: 0.4s;
+  text-align: center;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: rgb(39, 39, 39);
+  border: 2px solid goldenrod;
+  transition-duration: 0.4s;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 160px;
+  overflow: visible;
+  z-index: 2;
+  border: 2px solid goldenrod;
+  border-radius: 10px;
+}
+
+li{
+  text-align: left;
+}
+
+.show {display: block;}
+
+#error{
+  margin: 0;
+}
+
+#content{
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+    border: 2px;
+    border-color: goldenrod;
+    visibility: hidden;
+    margin: 50px;
+    margin-top: 0;
+    padding-top: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    border: 2px solid goldenrod;
+    display: grid;
+    grid-template-areas: 
+    'title title button'
+    'genInfo genInfo poster'
+    'plot plot poster'
+    'reception reception poster';
+    text-align: left;
+    align-items: center;
+}
+
+@media screen and (max-width: 700px){
+
+  #content{
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    text-align: left;
+  }
+  #poster{
+    align-self: center;
+  }
+  .textBoxes{
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  input{
+    width: 30%;
+  }
+}
+
+#movieTitle { 
+  text-align: center;
+  grid-area: title; }
+#poster { grid-area: poster; }
+#genInfo { grid-area: genInfo; }
+#plot { grid-area: plot; }
+#reception { 
+  grid-area: reception; 
+}
+#watchlist{ 
+  grid-area: button;
+  justify-self: center;}
+
+#error{
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  border: 2px;
+  border-color: goldenrod;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
